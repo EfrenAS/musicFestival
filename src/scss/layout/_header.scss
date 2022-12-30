@@ -1,0 +1,18 @@
+@use 'base/variables' as var;
+
+.header {
+  background-color: var.$green;
+
+  h1 {
+    color: var.$white;
+  }
+}
+
+.main-nav a{
+  color: var.$white;
+  font-size: 2.4rem;
+
+  &:hover {
+    color: var.$yellow;
+  }
+}

@@ -1,7 +1,2 @@
-@use 'base' as v;
-
-
-
-html {
-  background-color: v.$green;
-}
+@use 'base';
+@use 'layout'
