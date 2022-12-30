@@ -357,11 +357,42 @@ h3 {
 }
 .header h1 {
   color: #ffffff;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header h1 {
+    margin: 0;
+  }
+}
+.header .header-content {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 2rem;
+  }
 }
 
 .main-nav a {
   color: #ffffff;
+  display: block;
   font-size: 2.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .main-nav a {
+    margin: 0;
+  }
 }
 .main-nav a:hover {
   color: #fef46d;

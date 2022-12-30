@@ -1,16 +1,47 @@
 @use 'base/variables' as var;
+@use 'base/mixins' as mxs;
 
 .header {
   background-color: var.$green;
 
   h1 {
     color: var.$white;
+    text-align: center;
+
+    @include mxs.tablet {
+      margin: 0;
+    }
+  }
+
+  .header-content {
+    padding: 2rem;
+
+    @include mxs.tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;  
+    }
+  }
+}
+
+.main-nav {
+
+  @include mxs.tablet {
+    display: flex;
+    gap: 2rem;
   }
 }
 
 .main-nav a{
   color: var.$white;
+  display: block;
   font-size: 2.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  
+  @include mxs.tablet {
+    margin: 0;
+  }
 
   &:hover {
     color: var.$yellow;
