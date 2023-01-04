@@ -1,0 +1,60 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mxs;
+
+.gallery {
+  padding: 5rem 0;
+
+  h3{
+    text-align: center;
+  }
+}
+
+.gallery-image {
+  @include mxs.reset-list;
+  @include mxs.grid(2, 2rem);
+
+  @include mxs.mobile {
+    @include mxs.grid(3, 2rem);
+  }
+
+  @include mxs.tablet {
+    @include mxs.grid(4, 2rem);
+  }
+
+  @include mxs.desktop {
+    @include mxs.grid (6, 2rem);
+  }
+}
+
+.overlay {
+  background-color: rgb(0 0 0 / 0.5);
+  bottom: 0;
+  display: grid;
+  height: 100%;
+  left: 0;
+  place-items: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  picture {
+    display: block;
+    max-width: 80rem;
+  }
+}
+
+.btn-close {
+  background-color: var.$white;
+  border-radius: 50%;
+  color: var.$black;
+  display: grid;
+  font-weight: 700;
+  height: 4rem;
+  place-items: center;
+  width: 4rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
