@@ -323,6 +323,9 @@ body {
 body.fix-body {
   overflow: hidden;
 }
+body.body-scroll {
+  padding-top: 8.6rem;
+}
 
 p {
   color: #000000;
@@ -365,6 +368,15 @@ img {
 
 .header {
   background-color: #4cb8b3;
+}
+@media (min-width: 768px) {
+  .header.anchor {
+    box-shadow: 0.1rem 0.2rem 0.3rem #333333;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 }
 .header h1 {
   color: #ffffff;
